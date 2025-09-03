@@ -1,0 +1,16 @@
+// Adding simple interactive animations
+document.querySelectorAll('.card').forEach(card => {
+    card.addEventListener('click', () => {
+        alert(`You clicked on ${card.textContent}`);
+    });
+});
+
+// Glow effect on name periodically
+setInterval(() => {
+    document.querySelector('.glow').style.textShadow =
+        "0 0 30px gold, 0 0 60px #ffdf00";
+    setTimeout(() => {
+        document.querySelector('.glow').style.textShadow =
+        "0 0 20px gold, 0 0 40px #ffd700";
+    }, 500);
+}, 1500);
